@@ -11,20 +11,38 @@ comparta la misma fila, columna o diagonal.
 
 La forma clásica de resolver el problema es a través del uso de backtracking. Presentamos aquí una implementación recursiva.
 
-OchoReinas
+es_seguro(tablero, fila, columna)
+```text
+    para i ← 0 hasta fila-1
+
+        si tablero[i] = columna
+            retornar FALSO
+
+        si tablero[i] - i = columna - fila
+            retornar FALSO
+
+        si tablero[i] + i = columna + fila
+            retornar FALSO
+
+    retornar VERDADERO
+```
+
+ resolver_8_reinas(tablero, fila)
 
 ```text
-Algoritmo NReinas(n)
-    tablero ← arreglo de tamaño n
-    resolver(0)
+    si fila = N
+        retornar VERDADERO
 
-función resolver(fila)
-    si fila = n entonces
-        imprimir tablero
-        regresar
+    para columna ← 0 hasta N-1
 
-    para columna ← 0 hasta n-1
-        si esSeguro(tablero, fila, columna) entonces
+        si ES_SEGURO(tablero, fila, columna)
+
             tablero[fila] ← columna
-            resolver(fila + 1)
+
+            si RESOLVER_REINAS(tablero, fila + 1)
+                retornar VERDADERO
+
+            tablero[fila] ← -1
+
+    retornar FALSO
 ```
