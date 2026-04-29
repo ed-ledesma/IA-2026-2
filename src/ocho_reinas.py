@@ -5,7 +5,7 @@ Facultad de Ciencias
 Materia: Inteligencia Artificial
 Docente: Dra. Jessica Sarahi Méndez Rincón
 Ayudante de Laboratorio: Diego Eduardo Peña Villegas
-Alumno: [Nombre del Alumno]
+Alumno: Eduardo Ledesma Cuevas
 Año escolar: 2026-2
 Copyright: (c) 2025 UNAM - MIT License
 Version: 1.0
